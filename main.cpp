@@ -6,4 +6,5 @@
 
 int main()
 {
+    Destroyer dest; //Initializing destroyer
 }
