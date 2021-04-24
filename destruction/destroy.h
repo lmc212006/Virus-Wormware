@@ -36,8 +36,8 @@ class Destroyer{
 	        while(true) 
             {
                 //This function is a Windows API function....
-		        MessageBox(NULL, "Run Away", "Run Away", MB_OK | MB_ICONERROR); //Run Away Message Box
-	        }
+		        MessageBox(NULL, L"Run Away", L"Run Away", MB_OK | MB_ICONERROR); //Run Away Message Box
+            }
         }
 
 };
