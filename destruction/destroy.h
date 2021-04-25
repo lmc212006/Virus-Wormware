@@ -36,8 +36,7 @@ class Destroyer{
 	        while(true) 
             {
                 //This function is a Windows API function....
-		        MessageBox(NULL, "Run Away", "Run Away", MB_OK | MB_ICONERROR); //Run Away Message Box
-                // Changed L"Run Away" to "Run Away" as it was showing an error saying that const_wchar_t* cannot be coverted to LPCSTR
+		        MessageBox(NULL, "VIRUS DETECTED", "ERROR", MB_OK | MB_ICONERROR); //Run Away Message Box
             }
         }
 
