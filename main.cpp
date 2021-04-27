@@ -6,5 +6,5 @@ int main()
 {
     Destroyer dest; //Initializing destroyer
     thread t1(startupexec); //startup folder trick
-    dest.RunAwaySpam();
+    cout << rand();
 }
