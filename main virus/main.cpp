@@ -8,4 +8,5 @@ int WinMain(int hInstance, int hPrevInstance, char *lpCmdLine, int nShowCmd) {
     //thinking of a way to call function randomly
     //but the function should be called only once
     //one each time
+    //the virus gets executed at every startup after running installer.cpp
 }
