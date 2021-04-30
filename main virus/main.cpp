@@ -2,8 +2,7 @@
 
 using namespace std;
 
-//standard windows main function
-int WinMain(int hInstance, int hPrevInstance, char *lpCmdLine, int nShowCmd) {
+int main() {
     Destroyer dest; //Initializing destroyer
     /*thinking of a way to call function randomly
      *but the function should be called only once
