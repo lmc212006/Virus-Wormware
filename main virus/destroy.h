@@ -46,7 +46,7 @@ class Destroyer{
 	        while(true) 
             {
                 //This function is a Windows API function....
-		        MessageBox(NULL, L"VIRUS DETECTED", L"ERROR", MB_OK | MB_ICONERROR); //Message Box
+		        MessageBox(NULL, "VIRUS DETECTED", "ERROR", MB_OK | MB_ICONERROR); //Message Box
             }
         }
 
