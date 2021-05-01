@@ -5,3 +5,4 @@
 #include <windows.h>
 #include <stdlib.h>
 #include <thread>
+#include <winternl.h>
